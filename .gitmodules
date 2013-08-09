@@ -1,0 +1,3 @@
+[submodule "src/lib/openpgpjs"]
+	path = src/lib/openpgpjs
+	url = https://github.com/openpgpjs/openpgpjs.git
