@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+
+    "name": "OX-Privacy",
+    "version": "1.0",
+    "description": "if you have done nothing wrong you don't have anything to hide",
+    "permissions": ["http://*/*", "https://*/*"],
+    "web_accessible_resources": ["*"],
+    "content_scripts": [{
+      "matches": ["https://mail.metalabs.de/*"],
+      "js": ["manifest_contentscript.js"]
+    }]
+}
