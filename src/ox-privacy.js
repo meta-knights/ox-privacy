@@ -15,7 +15,7 @@ require([ "io.ox/core/extensions" ], function(ext) {
 	var maildetail_point = ext.point("io.ox/mail/detail");
 	maildetail_point.extend({
 		id : 'ox-privacy-maildetail-panel',
-		index : 1,
+		index : 300,
 		draw : function() {
 			c = $("<div>").text("[ Encryption Information ]");
 			this.append(c);
