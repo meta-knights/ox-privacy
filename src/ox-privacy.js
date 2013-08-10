@@ -27,9 +27,22 @@ require([ "io.ox/core/extensions" ], function(ext) {
 		id : 'ox-privacy-mailsettings-panel',
 		index : 300,
 		draw : function() {
+			signature_list = $('<div>');
+			signature_list.attr('id', 'signaturelist');
+			signature_list.attr('class', 'listbox');
+			signature_list.css({
+				'min-height': '80px',
+				'max-height': '200px'
+			});
 			this.append(
-					$('<legend>').text('Encryption'),
-					$('<div>').text('[ Settings Panel for Encryption ]'),
+					$('<legend>').text('Encryption').attr('class', 'sectiontitle'),
+					$('<div>').text('Private Keys:'),
+					signature_list,
+					$('<div>').attr('class', 'sectioncontent').append(
+							$('<button>').attr('class', 'btn btn-primary').css({'margin-right': '15px'}).text('Add'),
+							$('<button>').attr('class', 'btn').css({'margin-right': '15px'}).text('Edit'),
+							$('<button>').attr('class', 'btn').css({'margin-right': '15px'}).text('Delete')
+					),
 					$('<br>')
 					);
 		}
